@@ -1,6 +1,6 @@
 # MathGame
 
-<h1>Creación de juego en python sobre resolución de problemas matemáticos.</h1>
+<h2>Creación de juego en python sobre resolución de problemas matemáticos.</h2>
 La idea es que el usuario introduce la dificultad, tipo de preguntas y cantidad de ellas y dependiendo de la dificultad elegida deberá de tener un tiempo para resolverlas.
 
 # Changelog
@@ -19,7 +19,7 @@ La idea es que el usuario introduce la dificultad, tipo de preguntas y cantidad 
 
 <b>Features</b>
 
-Se corrige el bug encontrado en el que volvería a preguntar eternamente si se responde correctamente.
+- Se corrige el bug encontrado en el que volvería a preguntar eternamente si se responde correctamente.
 
 <b>Bugs</b>
 
