@@ -84,8 +84,8 @@ while sumas == "s":
         resultadoreal = int(resultadoreal)                  #Convertir a Integer
 
         #Debugging (Muestra el resultado por pantalla)--------------------------
-        print("")
-        print(resultadoreal)
+        #print("")
+        #print(resultadoreal)
         #-----------------------------------------------------------------------
 
         print("")
