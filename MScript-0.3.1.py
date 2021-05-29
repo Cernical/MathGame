@@ -59,39 +59,47 @@ sumas = "s"
 
 while sumas == "s":
 
+    #Reinicialización-----------------------------------------------------------
     puntuacion = 0
-    bucle3 = 0              #Reinicialización
+    ContadorPreguntas = 0
+    #---------------------------------------------------------------------------
 
-    while bucle3 < numPreguntas:
+    while ContadorPreguntas < numPreguntas:
 
-        #Reinicialización Variables
+        #Reinicialización Variables---------------------------------------------
         randomnumero1 = 0
         randomnumero2 = 0
         resultadoreal = 0
         solucion = 0
-        #--------------------------
+        #-----------------------------------------------------------------------
 
         print("")
         print("Sumas entre dos números:")
         print("")
         from random import randrange
-        randomnumero1=(randrange(0,100))                        #Rango de suma
-        randomnumero2=(randrange(0,100))                        #Rango de suma
+        randomnumero1=(randrange(0,100))                    #Rango de suma
+        randomnumero2=(randrange(0,100))                    #Rango de suma
         print(randomnumero1,"+",randomnumero2)
-        resultadoreal = randomnumero1+randomnumero2             #Resultadoreal
-        resultadoreal = int(resultadoreal)                      #Convertir a Integer
+        resultadoreal = randomnumero1+randomnumero2         #Resultadoreal
+        resultadoreal = int(resultadoreal)                  #Convertir a Integer
+
+        #Debugging (Muestra el resultado por pantalla)--------------------------
         print("")
-        solucion = input("Cuál es la solución: ")               #Solucion introducida pantalla
-        solucion = int(solucion)                                #Convertir a integer
+        print(resultadoreal)
+        #-----------------------------------------------------------------------
+
+        print("")
+        solucion = input("Cuál es la solución: ")           #Solucion introducida pantalla
+        solucion = int(solucion)                            #Convertir a integer
         if solucion == resultadoreal:
             puntuacion = puntuacion + 1
             print("")
             print("OK")
+            ContadorPreguntas = ContadorPreguntas + 1
         else:
             print("")
             print("Respuesta incorrecta, el resultado era ",resultadoreal)
-
-            bucle3 = bucle3 + 1
+            ContadorPreguntas = ContadorPreguntas + 1
 
         print("")
         print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
