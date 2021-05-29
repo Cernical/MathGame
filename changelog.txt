@@ -17,3 +17,13 @@ Features
 Bugs
 
 - Ninguno
+
+v0.3.2
+
+Features
+
+- Se añade la versión del script en la pantalla de bienvenida.
+
+Bugs
+
+- Ninguno
