@@ -6,7 +6,7 @@ bucle = 1
 while bucle == 1:
 
     print("-----------------------------------------------")
-    print("          ¡Bienvenido al programa!")
+    print("       ¡Bienvenido a MathGame! v0.3.2")
     print("-----------------------------------------------")
     print("")
     dificultad = input("Introduce una dificultad (f/n/d): ")
