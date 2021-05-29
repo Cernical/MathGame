@@ -1,7 +1,8 @@
 # MathGame
 
 <h2>Creación de juego en python sobre resolución de problemas matemáticos.</h2>
-La idea es que el usuario introduce la dificultad, tipo de preguntas y cantidad de ellas y dependiendo de la dificultad elegida deberá de tener un tiempo para resolverlas.
+El proyecto trata de resolver problemas matemáticos según las exigencias del usuario, (Número de preguntas, dificultad...) de momento solo es posible resolver números de 2-3 cifras como máximo, con la esperanza de añadir otras opciones y tipos de problemas, (restas, multiplicaciones, divisiones, ecuaciones, etc...)
+La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 # Changelog
 
