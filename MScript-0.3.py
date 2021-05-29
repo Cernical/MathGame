@@ -55,41 +55,51 @@ while bucle2 == 1:
 
 #Sumas--------------------------------------------------------------------------
 
-bucle3 = 0
-puntuacion = 0
-randomnumero1 = 0
-randomnumero2 = 0
-resultadoreal = 0
-solucion = 0
+sumas = "s"
 
-while bucle3 < numPreguntas:
+while sumas == "s":
 
-    print("")
-    print("Sumas entre dos números:")
-    print("")
-    from random import randrange
-    randomnumero1=(randrange(0,100)) #Rango de suma
-    randomnumero2=(randrange(0,100)) #Rango de suma
-    print(randomnumero1,"+",randomnumero2)
-    resultadoreal = randomnumero1+randomnumero2 #Resultadoreal
-    resultadoreal = int(resultadoreal) #Convertir a Integer
-    print("")
-    solucion = input("Cuál es la solución: ") #Solucion introducida pantalla
-    solucion = int(solucion) #Convertir a integer
-    if solucion == resultadoreal:
-        puntuacion = puntuacion + 1
+    puntuacion = 0
+    bucle3 = 0              #Reinicialización
+
+    while bucle3 < numPreguntas:
+
+        #Reinicialización Variables
+        randomnumero1 = 0
+        randomnumero2 = 0
+        resultadoreal = 0
+        solucion = 0
+        #--------------------------
+
         print("")
-        print("OK")
-    else:
+        print("Sumas entre dos números:")
         print("")
-        print("Respuesta incorrecta, el resultado era ",resultadoreal)
+        from random import randrange
+        randomnumero1=(randrange(0,100))                        #Rango de suma
+        randomnumero2=(randrange(0,100))                        #Rango de suma
+        print(randomnumero1,"+",randomnumero2)
+        resultadoreal = randomnumero1+randomnumero2             #Resultadoreal
+        resultadoreal = int(resultadoreal)                      #Convertir a Integer
+        print("")
+        solucion = input("Cuál es la solución: ")               #Solucion introducida pantalla
+        solucion = int(solucion)                                #Convertir a integer
+        if solucion == resultadoreal:
+            puntuacion = puntuacion + 1
+            print("")
+            print("OK")
+        else:
+            print("")
+            print("Respuesta incorrecta, el resultado era ",resultadoreal)
 
-    bucle3 = bucle3 + 1
+            bucle3 = bucle3 + 1
 
-print("")
-print("Has conseguido ",puntuacion," puntos de un total de ",numPreguntas)
+        print("")
+        print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+
+    print("")
+    sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
 
 #Erroes-------------------------------------------------------------------------
 
 #ValueError: invalid literal for int() with base 10: ''
-#^Se está introduciendo un string cuándo espera un integer
+#"Se está introduciendo un string cuándo espera un integer"
