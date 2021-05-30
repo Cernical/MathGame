@@ -13,21 +13,27 @@ clear()                                                        #Limpiar Pantalla
 while bucle == 1:
 
     print("-----------------------------------------------")
-    print("       ¡Bienvenido a MathGame! v0.4.0")
+    print("       ¡Bienvenido a MathGame! v0.5.0")
     print("-----------------------------------------------")
     print("")
     dificultad = input("Introduce una dificultad (f/n/d): ")
 
     if dificultad == "f":
-        dificultadSalida = "Fácil"
+        RangoMin = 0
+        RangoMax = 9
+        dificultadSalida = "fácil"
         bucle = 2
     else:
         if dificultad == "n":
-            dificultadSalida = "Normal"
+            RangoMin = 10
+            RangoMax = 99
+            dificultadSalida = "normal"
             bucle = 2
         else:
             if dificultad == "d":
-                dificultadSalida = "Difícil"
+                RangoMin = 100
+                RangoMax = 999
+                dificultadSalida = "difícil"
                 bucle = 2
             else:
                 print("")
@@ -91,8 +97,8 @@ while sumas == "s":
         print("Sumas entre dos números:")
         print("")
         from random import randrange
-        randomnumero1=(randrange(0,100))                    #Rango de suma
-        randomnumero2=(randrange(0,100))                    #Rango de suma
+        randomnumero1=(randrange(RangoMin,RangoMax))                    #Rango de suma
+        randomnumero2=(randrange(RangoMin,RangoMax))                    #Rango de suma
         print(randomnumero1,"+",randomnumero2)
         resultadoreal = randomnumero1+randomnumero2         #Resultadoreal
         resultadoreal = int(resultadoreal)                  #Convertir a Integer
