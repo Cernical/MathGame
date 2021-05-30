@@ -7,6 +7,7 @@ Features
 Bugs
 
 - Bug en el que si se responde correctamente a la pregunta volvería a realizar preguntas extras por cada una respondida con éxito.
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
 v0.3.1
 
@@ -16,7 +17,7 @@ Features
 
 Bugs
 
-- Ninguno
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
 v0.3.2
 
@@ -26,4 +27,15 @@ Features
 
 Bugs
 
-- Ninguno
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
+
+v0.4.0
+
+Features
+
+- Se corrige el error al introducir un valor no numérico al seleccionar nº de preguntas.
+- Se añade cambios menores en el funcionamiento de la interfaz.
+
+Bugs
+
+- Se producirá un error al introducir un valor no numérico al resolver problemas.
