@@ -15,6 +15,7 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 <b>Bugs</b>
 
 - Bug en el que si se responde correctamente a la pregunta volvería a realizar preguntas extras por cada una respondida con éxito.
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
 <h2>v0.3.1</h2>
 
@@ -24,7 +25,7 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 <b>Bugs</b>
 
-- Ninguno
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
 <h2>v0.3.2</h2>
 
@@ -34,4 +35,15 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 <b>Bugs</b>
 
-- Ninguno
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
+
+<h2>v0.4.0</h2>
+
+<b>Features</b>
+
+- Se corrige el error al introducir un valor no numérico al seleccionar nº de preguntas.
+- Se añade cambios menores en el funcionamiento de la interfaz.
+
+<b>Bugs</b>
+
+- Se producirá un error al introducir un valor no numérico al resolver problemas.
