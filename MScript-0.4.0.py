@@ -2,11 +2,18 @@
 
 #Bienvenida y pedida por pantalla Dificultad -----------------------------------
 
+#Funcion Limpiar Pantalla-------------------------------------------------------
+import subprocess
+clear = lambda: subprocess.call('cls||clear', shell=True)
+#-------------------------------------------------------------------------------
+
 bucle = 1
+
+clear()                                                        #Limpiar Pantalla
 while bucle == 1:
 
     print("-----------------------------------------------")
-    print("       ¡Bienvenido a MathGame! v0.3.2")
+    print("       ¡Bienvenido a MathGame! v0.4.0")
     print("-----------------------------------------------")
     print("")
     dificultad = input("Introduce una dificultad (f/n/d): ")
@@ -24,7 +31,8 @@ while bucle == 1:
                 bucle = 2
             else:
                 print("")
-                print("Entrada incorrecta")
+                clear()                                #Funcion Limpiar Pantalla
+                print("...Entrada incorrecta")
                 print("")
 
 print("")
@@ -41,15 +49,21 @@ bucle2 = 1
 while bucle2 == 1:
 
     numPreguntas = input("Cuántas preguntas quieres (del 1 al 5): ")
-    numPreguntas = int(numPreguntas)
-
-    if numPreguntas <1:
-        print("Debe seleccionar un número igual o mayor que 1")
+    try:
+        numPreguntas = int(numPreguntas)
+    except:
+        print("")
+        clear()
+        print("No has introducido un número")
+        print("")
     else:
-        if numPreguntas >5:
-            print("Has seleccionado un número incorrecto")
+        if numPreguntas <1:
+            print("Debe seleccionar un número igual o mayor que 1")
         else:
-            bucle2 = 2
+            if numPreguntas >5:
+                print("Has seleccionado un número incorrecto")
+            else:
+                bucle2 = 2
 
 #-------------------------------------------------------------------------------
 
@@ -106,6 +120,7 @@ while sumas == "s":
 
     print("")
     sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
+    clear()
 
 #Erroes-------------------------------------------------------------------------
 
