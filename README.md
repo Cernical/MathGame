@@ -47,3 +47,14 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 <b>Bugs</b>
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
+
+<h2>v0.5.0</h2>
+
+<b>Features</b>
+
+- La selección de dificultad ahora afectará al número de cifras de cada número.
+
+<b>Bugs</b>
+
+- Se producirá un error al introducir un valor no numérico al resolver problemas.
+
