@@ -39,3 +39,13 @@ Features
 Bugs
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
+
+v0.5.0
+
+Features
+
+- La selección de dificultad ahora afectará al número de cifras de cada número.
+
+Bugs
+
+- Se producirá un error al introducir un valor no numérico al resolver problemas.
