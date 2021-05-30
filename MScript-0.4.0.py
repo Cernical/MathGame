@@ -13,7 +13,7 @@ clear()                                                        #Limpiar Pantalla
 while bucle == 1:
 
     print("-----------------------------------------------")
-    print("       ¡Bienvenido a MathGame! v0.3.2")
+    print("       ¡Bienvenido a MathGame! v0.4.0")
     print("-----------------------------------------------")
     print("")
     dificultad = input("Introduce una dificultad (f/n/d): ")
