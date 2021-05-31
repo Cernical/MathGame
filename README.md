@@ -16,6 +16,8 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 - Ninguno
 
+<hr>
+
 <h2>v0.5.1</h2>
 
 <b>Features<b>
