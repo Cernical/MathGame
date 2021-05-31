@@ -1,33 +1,32 @@
-v0.3
+v0.5.2
 
 Features
 
-- Se añade la funcionalidad de volver a repetir las operaciones.
+- Ahora al no introducir un número válido y volver a preguntar no se cambiará el problema.
 
 Bugs
 
-- Bug en el que si se responde correctamente a la pregunta volvería a realizar preguntas extras por cada una respondida con éxito.
-- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
+- Ninguno
 
-v0.3.1
+v0.5.1
 
 Features
 
-- Se corrige el bug encontrado en el que volvería a preguntar eternamente si se responde correctamente.
+- Se corrigió el error al no introducir valor numérico al resolver los problemas.
 
 Bugs
 
-- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
+- Ninguno
 
-v0.3.2
+v0.5.0
 
 Features
 
-- Se añade la versión del script en la pantalla de bienvenida.
+- La selección de dificultad ahora afectará al número de cifras de cada número.
 
 Bugs
 
-- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
+- Se producirá un error al introducir un valor no numérico al resolver problemas.
 
 v0.4.0
 
@@ -40,23 +39,33 @@ Bugs
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
 
-v0.5.0
+v0.3.2
 
 Features
 
-- La selección de dificultad ahora afectará al número de cifras de cada número.
+- Se añade la versión del script en la pantalla de bienvenida.
 
 Bugs
 
-- Se producirá un error al introducir un valor no numérico al resolver problemas.
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
-v0.5.1
+v0.3.1
 
 Features
 
-- Se corrigió el error al no introducir valor numérico al resolver los problemas.
+- Se corrige el bug encontrado en el que volvería a preguntar eternamente si se responde correctamente.
 
 Bugs
 
-- Ninguno
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
+v0.3
+
+Features
+
+- Se añade la funcionalidad de volver a repetir las operaciones.
+
+Bugs
+
+- Bug en el que si se responde correctamente a la pregunta volvería a realizar preguntas extras por cada una respondida con éxito.
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
