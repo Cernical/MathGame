@@ -6,36 +6,35 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 # Changelog
 
-<h2>v0.3</h2>
+<h2>v0.5.2</h2>
 
 <b>Features</b>
 
-- Se añade la funcionalidad de volver a repetir las operaciones.
+- Ahora al no introducir un número válido y volver a preguntar no se cambiará el problema.
 
 <b>Bugs</b>
 
-- Bug en el que si se responde correctamente a la pregunta volvería a realizar preguntas extras por cada una respondida con éxito.
-- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
+- Ninguno
 
-<h2>v0.3.1</h2>
+<h2>v0.5.1</h2>
+
+<b>Features<b>
+
+- Se corrigió el error al no introducir valor numérico al resolver los problemas.
+
+<b>Bugs</b>
+
+- Ninguno
+
+<h2>v0.5.0</h2>
 
 <b>Features</b>
 
-- Se corrige el bug encontrado en el que volvería a preguntar eternamente si se responde correctamente.
+- La selección de dificultad ahora afectará al número de cifras de cada número.
 
 <b>Bugs</b>
 
-- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
-
-<h2>v0.3.2</h2>
-
-<b>Features</b>
-
-- Se añade la versión del script en la pantalla de bienvenida.
-
-<b>Bugs</b>
-
-- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
+- Se producirá un error al introducir un valor no numérico al resolver problemas.
 
 <h2>v0.4.0</h2>
 
@@ -48,34 +47,33 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
 
-<h2>v0.5.0</h2>
+<h2>v0.3.2</h2>
 
 <b>Features</b>
 
-- La selección de dificultad ahora afectará al número de cifras de cada número.
+- Se añade la versión del script en la pantalla de bienvenida.
 
 <b>Bugs</b>
 
-- Se producirá un error al introducir un valor no numérico al resolver problemas.
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
-<h2>v0.5.1</h2>
+<h2>v0.3.1</h2>
 
 <b>Features</b>
 
-- Se corrigió el error al no introducir valor numérico al resolver los problemas.
+- Se corrige el bug encontrado en el que volvería a preguntar eternamente si se responde correctamente.
 
 <b>Bugs</b>
 
-- Ninguno
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
-<h2>v0.5.2</h2>
+<h2>v0.3</h2>
 
 <b>Features</b>
 
-- Ahora al no introducir un número válido y volver a preguntar no se cambiará el problema.
+- Se añade la funcionalidad de volver a repetir las operaciones.
 
 <b>Bugs</b>
 
-- Ninguno
-
-
+- Bug en el que si se responde correctamente a la pregunta volvería a realizar preguntas extras por cada una respondida con éxito.
+- Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
