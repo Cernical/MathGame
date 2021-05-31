@@ -68,4 +68,14 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 - Ninguno
 
+<h2>v0.5.2</h2>
+
+<b>Features</b>
+
+- Ahora al no introducir un número válido y volver a preguntar no se cambiará el problema.
+
+<b<Bugs</b>
+
+- Ninguno
+
 
