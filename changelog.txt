@@ -60,3 +60,14 @@ Bugs
 
 - Ninguno
 
+v0.5.2
+
+Features
+
+- Ahora al no introducir un número válido y volver a preguntar no se cambiará el problema.
+
+Bugs
+
+- Ninguno
+
+
