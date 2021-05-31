@@ -13,7 +13,7 @@ clear()                                                        #Limpiar Pantalla
 while bucle == 1:
 
     print("-----------------------------------------------")
-    print("       ¡Bienvenido a MathGame! v0.5.0")
+    print("       ¡Bienvenido a MathGame! v0.5.1")
     print("-----------------------------------------------")
     print("")
     dificultad = input("Introduce una dificultad (f/n/d): ")
@@ -60,7 +60,7 @@ while bucle2 == 1:
     except:
         print("")
         clear()
-        print("No has introducido un número")
+        print("...No has introducido un número")
         print("")
     else:
         if numPreguntas <1:
@@ -110,25 +110,26 @@ while sumas == "s":
 
         print("")
         solucion = input("Cuál es la solución: ")           #Solucion introducida pantalla
-        solucion = int(solucion)                            #Convertir a integer
-        if solucion == resultadoreal:
-            puntuacion = puntuacion + 1
-            print("")
-            print("OK")
-            ContadorPreguntas = ContadorPreguntas + 1
-        else:
-            print("")
-            print("Respuesta incorrecta, el resultado era ",resultadoreal)
-            ContadorPreguntas = ContadorPreguntas + 1
 
-        print("")
-        print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+        try:
+            solucion = int(solucion)                            #Convertir a integer
+        except:
+            clear()
+            print("...No has introducido un número")
+        else:
+            if solucion == resultadoreal:
+                puntuacion = puntuacion + 1
+                print("")
+                print("OK")
+                ContadorPreguntas = ContadorPreguntas + 1
+            else:
+                print("")
+                print("Respuesta incorrecta, el resultado era ",resultadoreal)
+                ContadorPreguntas = ContadorPreguntas + 1
+
+            print("")
+            print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
 
     print("")
     sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
     clear()
-
-#Erroes-------------------------------------------------------------------------
-
-#ValueError: invalid literal for int() with base 10: ''
-#"Se está introduciendo un string cuándo espera un integer"
