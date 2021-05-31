@@ -13,7 +13,7 @@ clear()                                                        #Limpiar Pantalla
 while bucle == 1:
 
     print("-----------------------------------------------")
-    print("       ¡Bienvenido a MathGame! v0.5.1")
+    print("       ¡Bienvenido a MathGame! v0.5.2")
     print("-----------------------------------------------")
     print("")
     dificultad = input("Introduce una dificultad (f/n/d): ")
@@ -91,14 +91,15 @@ while sumas == "s":
         randomnumero2 = 0
         resultadoreal = 0
         solucion = 0
+        salidaOperacionSumas = 1
         #-----------------------------------------------------------------------
 
         print("")
         print("Sumas entre dos números:")
         print("")
         from random import randrange
-        randomnumero1=(randrange(RangoMin,RangoMax))                    #Rango de suma
-        randomnumero2=(randrange(RangoMin,RangoMax))                    #Rango de suma
+        randomnumero1=(randrange(RangoMin,RangoMax))              #Rango de suma
+        randomnumero2=(randrange(RangoMin,RangoMax))              #Rango de suma
         print(randomnumero1,"+",randomnumero2)
         resultadoreal = randomnumero1+randomnumero2         #Resultadoreal
         resultadoreal = int(resultadoreal)                  #Convertir a Integer
@@ -108,27 +109,35 @@ while sumas == "s":
         #print(resultadoreal)
         #-----------------------------------------------------------------------
 
-        print("")
-        solucion = input("Cuál es la solución: ")           #Solucion introducida pantalla
-
-        try:
-            solucion = int(solucion)                            #Convertir a integer
-        except:
-            clear()
-            print("...No has introducido un número")
-        else:
-            if solucion == resultadoreal:
-                puntuacion = puntuacion + 1
-                print("")
-                print("OK")
-                ContadorPreguntas = ContadorPreguntas + 1
-            else:
-                print("")
-                print("Respuesta incorrecta, el resultado era ",resultadoreal)
-                ContadorPreguntas = ContadorPreguntas + 1
+        while salidaOperacionSumas == 1:   #Para mantener los números anteriores
 
             print("")
-            print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+            solucion = input("Cuál es la solución: ")           #Solucion introducida pantalla
+
+            try:
+                solucion = int(solucion)                        #Convertir a integer
+            except:
+                clear()
+                print("...No has introducido un número")
+                print("")
+                print(randomnumero1,"+",randomnumero2)
+
+            else:
+                if solucion == resultadoreal:
+                    puntuacion = puntuacion + 1
+                    print("")
+                    print("OK")
+                    ContadorPreguntas = ContadorPreguntas + 1
+                    salidaOperacionSumas = 0
+                else:
+                    print("")
+                    print("Respuesta incorrecta, el resultado era ",resultadoreal)
+                    ContadorPreguntas = ContadorPreguntas + 1
+                    salidaOperacionSumas = 0
+
+
+        print("")
+        print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
 
     print("")
     sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
