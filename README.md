@@ -28,6 +28,8 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 - Ninguno
 
+<hr>
+
 <h2>v0.5.0</h2>
 
 <b>Features</b>
@@ -37,6 +39,8 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 <b>Bugs</b>
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
+
+<hr>
 
 <h2>v0.4.0</h2>
 
@@ -49,6 +53,8 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
 
+<hr>
+
 <h2>v0.3.2</h2>
 
 <b>Features</b>
@@ -59,6 +65,8 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
+<hr>
+
 <h2>v0.3.1</h2>
 
 <b>Features</b>
@@ -68,6 +76,8 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 <b>Bugs</b>
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
+
+<hr>
 
 <h2>v0.3</h2>
 
