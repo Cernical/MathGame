@@ -49,3 +49,14 @@ Features
 Bugs
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
+
+v0.5.1
+
+Features
+
+- Se corrigió el error al no introducir valor numérico al resolver los problemas.
+
+Bugs
+
+- Ninguno
+

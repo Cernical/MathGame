@@ -58,3 +58,14 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
 
+<h2>v0.5.1</h2>
+
+<b>Features</b>
+
+- Se corrigió el error al no introducir valor numérico al resolver los problemas.
+
+<b>Bugs</b>
+
+- Ninguno
+
+
