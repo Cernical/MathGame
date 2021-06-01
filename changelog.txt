@@ -1,3 +1,13 @@
+v0.6.0
+
+Features
+
+- Mejoras en la interfaz (Ahora se podrá regresar al menú)
+
+Bugs
+
+- Ninguno
+
 v0.5.2
 
 Features
