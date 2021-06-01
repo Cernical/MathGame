@@ -112,8 +112,8 @@ while Programa == 1:
                     resultadoreal = int(resultadoreal)              #Convertir a Integer
 
                     #Debugging (Muestra el resultado por pantalla)--------------
-                    print("")
-                    print(resultadoreal)
+                    #print("")
+                    #print(resultadoreal)
                     #-----------------------------------------------------------
 
                     while salidaOperacionSumas == 1:   #Para mantener los números anteriores
@@ -189,8 +189,8 @@ while Programa == 1:
                         resultadoreal = int(resultadoreal)              #Convertir a Integer
 
                         #Debugging (Muestra el resultado por pantalla)----------
-                        print("")
-                        print(resultadoreal)
+                        #print("")
+                        #print(resultadoreal)
                         #-------------------------------------------------------
 
                         while salidaOperacionRestas == 1:   #Para mantener los números anteriores
