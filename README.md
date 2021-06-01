@@ -5,6 +5,16 @@ El proyecto empezó para aprender Python, trata de resolver problemas matemátic
 
 # Changelog
 
+<h2>v0.7.1</h2>
+
+<b>Features</b>
+
+- Mejoras en la interfaz
+
+<b>Bugs</b>
+
+- Ninguno
+
 <h2>v0.7.0</h2>
 
 <b>Features</b>
@@ -13,7 +23,7 @@ El proyecto empezó para aprender Python, trata de resolver problemas matemátic
 
 <b>Bugs</b>
 
-- (Por encontrar)
+- Ninguno
 
 <hr>
 
