@@ -12,7 +12,7 @@ La versión final debería contener una interfáz gráfica de usuario (GUI).
 
 - Mejoras en la interfaz (Ahora se podrá regresar al menú)
 
-<b>Bugs</b>>
+<b>Bugs</b>
 
 - Ninguno
 
