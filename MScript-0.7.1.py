@@ -15,9 +15,10 @@ while Programa == 1:
     clear()                                                    #Limpiar Pantalla
     while bucle == 1:                      #Bienvenida e Introducción Dificultad
 
-        print("-----------------------------------------------")
-        print("       ¡Bienvenido a MathGame! v0.7.0")
-        print("-----------------------------------------------")
+        print("___________________________________________________")
+        print()
+        print("          ¡Bienvenido a MathGame! v0.7.1")
+        print("___________________________________________________")
         print("")
         dificultad = input("Introduce una dificultad (f/n/d): ")
 
@@ -41,13 +42,13 @@ while Programa == 1:
                 else:
                     print("")
                     clear()                            #Funcion Limpiar Pantalla
-                    print("...Entrada incorrecta")
+                    print("...No has introducido una opción válida (Introduce 'f', 'n' o 'd')")
                     print("")
 
     print("")
     print("has seleccionado la dificultad "+dificultadSalida)
     print("")
-    print("-----------------------------------------------")
+    print("---------------------------------------------------")
     print("")
 
     #---------------------------------------------------------------------------
@@ -79,7 +80,8 @@ while Programa == 1:
     BucleSeleccionProblemas = 1
     while BucleSeleccionProblemas == 1:
         print("")
-        SeleccionProblemas = input("Seleccione tipo de problemas; Sumas o Restas (s,r): ")
+        SeleccionProblemas = input("Seleccione tipo de problemas; Sumas o Restas (s/r): ")
+        clear()
         if SeleccionProblemas == "s":
             #Sumas--------------------------------------------------------------
             sumas = "s"
@@ -100,7 +102,6 @@ while Programa == 1:
                     salidaOperacionSumas = 1
                     #-----------------------------------------------------------
 
-                    print("")
                     print("Sumas entre dos números:")
                     print("")
                     from random import randrange
@@ -131,12 +132,12 @@ while Programa == 1:
                         else:
                             if solucion == resultadoreal:
                                 puntuacion = puntuacion + 1
-                                print("")
-                                print("OK")
+                                clear()
+                                print("¡Has acertado!")
                                 ContadorPreguntas = ContadorPreguntas + 1
                                 salidaOperacionSumas = 0
                             else:
-                                print("")
+                                clear()
                                 print("Respuesta incorrecta, el resultado era ",resultadoreal)
                                 ContadorPreguntas = ContadorPreguntas + 1
                                 salidaOperacionSumas = 0
@@ -178,7 +179,6 @@ while Programa == 1:
                         salidaOperacionRestas = 1
                         #-------------------------------------------------------
 
-                        print("")
                         print("Restas entre dos números:")
                         print("")
                         from random import randrange
@@ -209,12 +209,12 @@ while Programa == 1:
                             else:
                                 if solucion == resultadoreal:
                                     puntuacion = puntuacion + 1
-                                    print("")
-                                    print("OK")
+                                    clear()
+                                    print("!Has acertado¡")
                                     ContadorPreguntas = ContadorPreguntas + 1
                                     salidaOperacionRestas = 0
                                 else:
-                                    print("")
+                                    clear()
                                     print("Respuesta incorrecta, el resultado era ",resultadoreal)
                                     ContadorPreguntas = ContadorPreguntas + 1
                                     salidaOperacionRestas = 0
@@ -237,6 +237,6 @@ while Programa == 1:
                     clear()
             else:
                 clear()
-                print("...No has introducido una opción válida")
+                print("...No has introducido una opción válida (Introduce 's' o 'r')")
 
 #Fin Programa-------------------------------------------------------------------

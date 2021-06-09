@@ -1,114 +1,101 @@
-# MathGame
+v0.7.1
 
-<h2>Creación de juego en python sobre resolución de problemas matemáticos.</h2>
-El proyecto empezó para aprender Python, trata de resolver problemas matemáticos según las exigencias del usuario, (Número de preguntas, dificultad...) de momento solo es posible resolver números de 1-3 cifras como máximo, con la esperanza de añadir otras opciones y tipos de problemas, (multiplicaciones, divisiones, ecuaciones, etc...) La versión final debería contener una interfáz gráfica de usuario (GUI).
+Features
 
-# Changelog
+- Mejoras en la interfaz.
 
-<h2>v0.7.0</h2>
+Bugs
 
-<b>Features</b>
+- Ninguno
+
+v0.7.0
+
+Features
 
 - Se añade la funcionalidad de poder realizar restas.
 
-<b>Bugs</b>
-
-- (Por encontrar)
-
-<hr>
-
-<h2>v0.6.0</h2>
-
-<b>Features</b>
-
-- Mejoras en la interfaz (ahora se podrá regresar al menú)
-
-<b>Bugs</b>
+Bugs
 
 - Ninguno
 
-<hr>
+v0.6.0
 
-<h2>v0.5.2</h2>
+Features
 
-<b>Features</b>
+- Mejoras en la interfaz (Ahora se podrá regresar al menú)
+
+Bugs
+
+- Ninguno
+
+v0.5.2
+
+Features
 
 - Ahora al no introducir un número válido y volver a preguntar no se cambiará el problema.
 
-<b>Bugs</b>
+Bugs
 
 - Ninguno
 
-<hr>
+v0.5.1
 
-<h2>v0.5.1</h2>
-
-<b>Features</b>
+Features
 
 - Se corrigió el error al no introducir valor numérico al resolver los problemas.
 
-<b>Bugs</b>
+Bugs
 
 - Ninguno
 
-<hr>
+v0.5.0
 
-<h2>v0.5.0</h2>
-
-<b>Features</b>
+Features
 
 - La selección de dificultad ahora afectará al número de cifras de cada número.
 
-<b>Bugs</b>
+Bugs
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
 
-<hr>
+v0.4.0
 
-<h2>v0.4.0</h2>
-
-<b>Features</b>
+Features
 
 - Se corrige el error al introducir un valor no numérico al seleccionar nº de preguntas.
 - Se añade cambios menores en el funcionamiento de la interfaz.
 
-<b>Bugs</b>
+Bugs
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas.
 
-<hr>
+v0.3.2
 
-<h2>v0.3.2</h2>
-
-<b>Features</b>
+Features
 
 - Se añade la versión del script en la pantalla de bienvenida.
 
-<b>Bugs</b>
+Bugs
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
-<hr>
+v0.3.1
 
-<h2>v0.3.1</h2>
-
-<b>Features</b>
+Features
 
 - Se corrige el bug encontrado en el que volvería a preguntar eternamente si se responde correctamente.
 
-<b>Bugs</b>
+Bugs
 
 - Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
 
-<hr>
+v0.3
 
-<h2>v0.3</h2>
-
-<b>Features</b>
+Features
 
 - Se añade la funcionalidad de volver a repetir las operaciones.
 
-<b>Bugs</b>
+Bugs
 
 - Bug en el que si se responde correctamente a la pregunta volvería a realizar preguntas extras por cada una respondida con éxito.
 - Se producirá un error al introducir un valor no numérico al resolver problemas y seleccionar nº de preguntas.
