@@ -17,7 +17,7 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.7.1")
+        print("          ¡Bienvenido a MathGame! v0.8.0")
         print("___________________________________________________")
         print("")
         dificultad = input("Introduce una dificultad (f/n/d): ")
@@ -80,7 +80,7 @@ while Programa == 1:
     BucleSeleccionProblemas = 1
     while BucleSeleccionProblemas == 1:
         print("")
-        SeleccionProblemas = input("Seleccione tipo de problemas; Sumas o Restas (s/r): ")
+        SeleccionProblemas = input("Seleccione tipo de problemas; Sumas o Restas (s/r/m): ")
         clear()
         if SeleccionProblemas == "s":
             #Sumas--------------------------------------------------------------
@@ -158,6 +158,7 @@ while Programa == 1:
                         Programa = 1
                         BucleSeleccionProblemas = 0
                 clear()
+                #FinSumas-------------------------------------------------------
         else:
             if SeleccionProblemas == "r":
                 #Restas---------------------------------------------------------
@@ -235,8 +236,87 @@ while Programa == 1:
                             Programa = 1
                             BucleSeleccionProblemas = 0
                     clear()
+                    #FinRestas--------------------------------------------------
             else:
-                clear()
-                print("...No has introducido una opción válida (Introduce 's' o 'r')")
+                if SeleccionProblemas == "m":
+                    #Multiplicaciones-------------------------------------------
+                    multiplicaciones = "s"
+                    while multiplicaciones == "s":               #Mantener el modulo de Multiplicaciones
+
+                        #Reinicialización---------------------------------------
+                        puntuacion = 0
+                        ContadorPreguntas = 0
+                        #-------------------------------------------------------
+
+                        while ContadorPreguntas < numPreguntas:     #Generación de dos números aleatorios
+
+                            #Reinicialización Variables-------------------------
+                            randomnumero1 = 0
+                            randomnumero2 = 0
+                            resultadoreal = 0
+                            solucion = 0
+                            salidaOperacionMultiplicaciones = 1
+                            #---------------------------------------------------
+
+                            print("Multiplicaciones entre dos números:")
+                            print("")
+                            from random import randrange
+                            randomnumero1=(randrange(RangoMin,RangoMax))          #Rango de suma
+                            randomnumero2=(randrange(RangoMin,RangoMax))          #Rango de suma
+                            print(randomnumero1,"x",randomnumero2)
+                            resultadoreal = randomnumero1*randomnumero2           #Resultadoreal
+                            resultadoreal = int(resultadoreal)              #Convertir a Integer
+
+                            #Debugging (Muestra el resultado por pantalla)------
+                            #print("")
+                            #print(resultadoreal)
+                            #---------------------------------------------------
+
+                            while salidaOperacionMultiplicaciones == 1:   #Para mantener los números anteriores
+
+                                print("")
+                                solucion = input("Cuál es la solución: ")   #Solucion introducida pantalla
+
+                                try:
+                                    solucion = int(solucion)                #Convertir a integer
+                                except:
+                                    clear()
+                                    print("...No has introducido un número")
+                                    print("")
+                                    print(randomnumero1,"x",randomnumero2)
+
+                                else:
+                                    if solucion == resultadoreal:
+                                        puntuacion = puntuacion + 1
+                                        clear()
+                                        print("!Has acertado¡")
+                                        ContadorPreguntas = ContadorPreguntas + 1
+                                        salidaOperacionMultiplicaciones = 0
+                                    else:
+                                        clear()
+                                        print("Respuesta incorrecta, el resultado era ",resultadoreal)
+                                        ContadorPreguntas = ContadorPreguntas + 1
+                                        salidaOperacionMultiplicaciones = 0
+
+
+                            print("")
+                            print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+
+                        print("")
+                        multiplicaciones = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                        if multiplicaciones != "s":
+                            print("")
+                            Programa = input("¿Quieres salir? (s/N) ")
+                            if Programa == "s":
+                                Programa = 0
+                                BucleSeleccionProblemas = 0
+                            else:
+                                Programa = 1
+                                BucleSeleccionProblemas = 0
+                        clear()
+                        #FinMultiplicaciones------------------------------------
+                else:
+                    clear()
+                    print("...No has introducido una opción válida (Introduce 's', 'r' o 'm')")
 
 #Fin Programa-------------------------------------------------------------------

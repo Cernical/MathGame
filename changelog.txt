@@ -1,3 +1,13 @@
+v0.8.0
+
+Features
+
+- Se añade la funcionalidad de poder realizar multiplicaciones.
+
+Bugs
+
+- Por encontrar
+
 v0.7.1
 
 Features
