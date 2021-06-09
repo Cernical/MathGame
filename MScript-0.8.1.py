@@ -17,7 +17,7 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.8.0")
+        print("          ¡Bienvenido a MathGame! v0.8.1")
         print("___________________________________________________")
         print("")
         dificultad = input("Introduce una dificultad (f/n/d): ")
@@ -149,7 +149,7 @@ while Programa == 1:
                 print("")
                 sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
                 if sumas != "s":
-                    print("")
+                    clear()
                     Programa = input("¿Quieres salir? (s/N) ")
                     if Programa == "s":
                         Programa = 0
@@ -227,7 +227,7 @@ while Programa == 1:
                     print("")
                     restas = input("¿Quieres seguir realizando operaciones? (s/N) ")
                     if restas != "s":
-                        print("")
+                        clear()
                         Programa = input("¿Quieres salir? (s/N) ")
                         if Programa == "s":
                             Programa = 0
@@ -305,7 +305,7 @@ while Programa == 1:
                         print("")
                         multiplicaciones = input("¿Quieres seguir realizando operaciones? (s/N) ")
                         if multiplicaciones != "s":
-                            print("")
+                            clear()
                             Programa = input("¿Quieres salir? (s/N) ")
                             if Programa == "s":
                                 Programa = 0
