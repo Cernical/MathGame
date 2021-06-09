@@ -1,3 +1,13 @@
+v0.8.1
+
+Features
+
+- Mejoras en la interfaz
+
+Bugs
+
+- Por encontrar
+
 v0.8.0
 
 Features
