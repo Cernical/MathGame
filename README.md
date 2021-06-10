@@ -5,6 +5,18 @@ El proyecto empezó para aprender Python, trata de resolver problemas matemátic
 
 # Changelog
 
+<h2>v0.9.1</h2>
+
+<b>Features</b>
+
+- Corregido un error en la interfaz.
+
+<b>Bugs</b>
+
+- Por encontrar
+
+<hr>
+
 <h2>v0.9.0</h2>
 
 <b>Features</b>
