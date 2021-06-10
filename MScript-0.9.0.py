@@ -5,6 +5,17 @@ import subprocess
 clear = lambda: subprocess.call('cls||clear', shell=True)
 #-------------------------------------------------------------------------------
 
+#Creacion Archivo Puntuaciones--------------------------------------------------
+try:
+    archivo = open("./Documents/points.txt", "x")
+except:
+    print()
+else:
+    archivo = open("./Documents/points.txt", "w")
+    archivo.write("0")
+    archivo.close()
+#-------------------------------------------------------------------------------
+
 #Programa Entero----------------------------------------------------------------
 Programa = 1
 while Programa == 1:
@@ -17,9 +28,14 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.8.1")
+        print("          ¡Bienvenido a MathGame! v0.9.0")
         print("___________________________________________________")
         print("")
+        archivo = open("./Documents/points.txt", "r")
+        print("Tu puntuación total es de",archivo.read())
+        print("___________________________________________________")
+        print("")
+
         dificultad = input("Introduce una dificultad (f/n/d): ")
 
         if dificultad == "f":
@@ -146,6 +162,20 @@ while Programa == 1:
                     print("")
                     print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
 
+                #Abrir archivo, lectura y procesamiento-------------------------
+                archivo = open("./Documents/points.txt", "r")
+
+                contenido = archivo.read()
+                contenidoInt = int(contenido)
+
+                resultadoAintroducir = contenidoInt+puntuacion
+                resultadoAintroducir = str(resultadoAintroducir)
+
+                archivo = open("./Documents/points.txt", "w")
+                archivo.write(resultadoAintroducir)
+                archivo.close()
+                #---------------------------------------------------------------
+
                 print("")
                 sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
                 if sumas != "s":
@@ -223,6 +253,20 @@ while Programa == 1:
 
                         print("")
                         print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+
+                    #Abrir archivo, lectura y procesamiento---------------------
+                    archivo = open("./Documents/points.txt", "r")
+
+                    contenido = archivo.read()
+                    contenidoInt = int(contenido)
+
+                    resultadoAintroducir = contenidoInt+puntuacion
+                    resultadoAintroducir = str(resultadoAintroducir)
+
+                    archivo = open("./Documents/points.txt", "w")
+                    archivo.write(resultadoAintroducir)
+                    archivo.close()
+                    #-----------------------------------------------------------
 
                     print("")
                     restas = input("¿Quieres seguir realizando operaciones? (s/N) ")
@@ -302,6 +346,20 @@ while Programa == 1:
                             print("")
                             print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
 
+                        #Abrir archivo, lectura y procesamiento-----------------
+                        archivo = open("./Documents/points.txt", "r")
+
+                        contenido = archivo.read()
+                        contenidoInt = int(contenido)
+
+                        resultadoAintroducir = contenidoInt+puntuacion
+                        resultadoAintroducir = str(resultadoAintroducir)
+
+                        archivo = open("./Documents/points.txt", "w")
+                        archivo.write(resultadoAintroducir)
+                        archivo.close()
+                        #-------------------------------------------------------
+
                         print("")
                         multiplicaciones = input("¿Quieres seguir realizando operaciones? (s/N) ")
                         if multiplicaciones != "s":
@@ -318,5 +376,15 @@ while Programa == 1:
                 else:
                     clear()
                     print("...No has introducido una opción válida (Introduce 's', 'r' o 'm')")
+
+#Pregunta sobre Archivo Puntuacion----------------------------------------------
+respuestaPuntuacionArchivo = input("¿Quieres ver tu puntuación total? (s/N) ")
+if respuestaPuntuacionArchivo == "s":
+    archivo = open("./Documents/points.txt", "r")
+    clear()
+    print("Tu puntuación es de",archivo.read())
+else:
+    clear()
+#-------------------------------------------------------------------------------
 
 #Fin Programa-------------------------------------------------------------------
