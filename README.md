@@ -5,6 +5,18 @@ El proyecto empezó para aprender Python, trata de resolver problemas matemátic
 
 # Changelog
 
+<h2>v0.9.0</h2>
+
+<b>Features</b>
+
+- Añadido un sistema de puntuaciones que se almacenará en un archivo aparte.
+
+<b>Bugs</b>
+
+- Por encontrar
+
+<hr>
+
 <h2>v0.8.1</h2>
 
 <b>Features</b>
