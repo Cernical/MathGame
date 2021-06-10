@@ -28,7 +28,7 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.9.0")
+        print("          ¡Bienvenido a MathGame! v0.9.1")
         print("___________________________________________________")
         print("")
         archivo = open("./Documents/points.txt", "r")
@@ -96,7 +96,7 @@ while Programa == 1:
     BucleSeleccionProblemas = 1
     while BucleSeleccionProblemas == 1:
         print("")
-        SeleccionProblemas = input("Seleccione tipo de problemas; Sumas o Restas (s/r/m): ")
+        SeleccionProblemas = input("Seleccione tipo de problemas; Sumas, Restas o Multiplicaciones (s/r/m): ")
         clear()
         if SeleccionProblemas == "s":
             #Sumas--------------------------------------------------------------
