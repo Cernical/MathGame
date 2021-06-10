@@ -1,3 +1,13 @@
+v0.9.0
+
+Features
+
+- Añadido un sistema de puntuaciones que se almacenará en un archivo aparte.
+
+Bugs
+
+- Por encontrar
+
 v0.8.1
 
 Features
