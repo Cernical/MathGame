@@ -10,6 +10,19 @@
 
 # Changelog
 
+<h2>v0.9.2</h2>
+
+<b>Features</b>
+
+- Mejoras en la interfaz.
+- Se cambia el directorio del archivo de puntuaciones para mejorar compatibilidad entre distintos sistemas operativos.
+
+<b>Bugs</b>
+
+- Ninguno
+
+<hr>
+
 <h2>v0.9.1</h2>
 
 <b>Features</b>

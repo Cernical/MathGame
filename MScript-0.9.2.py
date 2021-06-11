@@ -7,11 +7,11 @@ clear = lambda: subprocess.call('cls||clear', shell=True)
 
 #Creacion Archivo Puntuaciones--------------------------------------------------
 try:
-    archivo = open("./Documents/points.txt", "x")
+    archivo = open("./points.txt", "x")
 except:
     print()
 else:
-    archivo = open("./Documents/points.txt", "w")
+    archivo = open("./points.txt", "w")
     archivo.write("0")
     archivo.close()
 #-------------------------------------------------------------------------------
@@ -28,10 +28,10 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.9.1")
+        print("          ¡Bienvenido a MathGame! v0.9.2")
         print("___________________________________________________")
         print("")
-        archivo = open("./Documents/points.txt", "r")
+        archivo = open("./points.txt", "r")
         print("Tu puntuación total es de",archivo.read())
         print("___________________________________________________")
         print("")
@@ -96,7 +96,11 @@ while Programa == 1:
     BucleSeleccionProblemas = 1
     while BucleSeleccionProblemas == 1:
         print("")
-        SeleccionProblemas = input("Seleccione tipo de problemas; Sumas, Restas o Multiplicaciones (s/r/m): ")
+        print("---------------------------------------------------")
+        print("")
+        print("Seleccione tipo de problemas;")
+        print("")
+        SeleccionProblemas = input("Sumas, Restas o Multiplicaciones (s/r/m): ")
         clear()
         if SeleccionProblemas == "s":
             #Sumas--------------------------------------------------------------
@@ -163,7 +167,7 @@ while Programa == 1:
                     print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
 
                 #Abrir archivo, lectura y procesamiento-------------------------
-                archivo = open("./Documents/points.txt", "r")
+                archivo = open("./points.txt", "r")
 
                 contenido = archivo.read()
                 contenidoInt = int(contenido)
@@ -171,7 +175,7 @@ while Programa == 1:
                 resultadoAintroducir = contenidoInt+puntuacion
                 resultadoAintroducir = str(resultadoAintroducir)
 
-                archivo = open("./Documents/points.txt", "w")
+                archivo = open("./points.txt", "w")
                 archivo.write(resultadoAintroducir)
                 archivo.close()
                 #---------------------------------------------------------------
@@ -255,7 +259,7 @@ while Programa == 1:
                         print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
 
                     #Abrir archivo, lectura y procesamiento---------------------
-                    archivo = open("./Documents/points.txt", "r")
+                    archivo = open("./points.txt", "r")
 
                     contenido = archivo.read()
                     contenidoInt = int(contenido)
@@ -263,7 +267,7 @@ while Programa == 1:
                     resultadoAintroducir = contenidoInt+puntuacion
                     resultadoAintroducir = str(resultadoAintroducir)
 
-                    archivo = open("./Documents/points.txt", "w")
+                    archivo = open("./points.txt", "w")
                     archivo.write(resultadoAintroducir)
                     archivo.close()
                     #-----------------------------------------------------------
@@ -347,7 +351,7 @@ while Programa == 1:
                             print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
 
                         #Abrir archivo, lectura y procesamiento-----------------
-                        archivo = open("./Documents/points.txt", "r")
+                        archivo = open("./points.txt", "r")
 
                         contenido = archivo.read()
                         contenidoInt = int(contenido)
@@ -355,7 +359,7 @@ while Programa == 1:
                         resultadoAintroducir = contenidoInt+puntuacion
                         resultadoAintroducir = str(resultadoAintroducir)
 
-                        archivo = open("./Documents/points.txt", "w")
+                        archivo = open("./points.txt", "w")
                         archivo.write(resultadoAintroducir)
                         archivo.close()
                         #-------------------------------------------------------
@@ -380,7 +384,7 @@ while Programa == 1:
 #Pregunta sobre Archivo Puntuacion----------------------------------------------
 respuestaPuntuacionArchivo = input("¿Quieres ver tu puntuación total? (s/N) ")
 if respuestaPuntuacionArchivo == "s":
-    archivo = open("./Documents/points.txt", "r")
+    archivo = open("./points.txt", "r")
     clear()
     print("Tu puntuación es de",archivo.read())
 else:
