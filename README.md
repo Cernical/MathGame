@@ -1,9 +1,38 @@
 # MathGame
 
 <h2>Creación de juego en python sobre resolución de problemas matemáticos.</h2>
-El proyecto empezó para aprender Python, trata de resolver problemas matemáticos según las exigencias del usuario, (Número de preguntas, dificultad...) de momento solo es posible resolver números de 1-3 cifras como máximo, con la esperanza de añadir otras opciones y tipos de problemas, (divisiones, ecuaciones, etc...) La versión final debería contener una interfáz gráfica de usuario (GUI).
+<p>El proyecto empezó para aprender Python, trata de resolver problemas matemáticos según las exigencias del usuario, (Número de preguntas, dificultad...) con la esperanza de añadir otras opciones y tipos de problemas, (divisiones, ecuaciones, etc...) La versión final debería contener una interfáz gráfica de usuario (GUI).</p>
+
+<p>Por ahora se puede realizar lo siguiente:</p>
+
+- Realizar Sumas, Restas y Multiplicaciones.
+- Guardar la puntuación total conseguida en todas las sesiones (WiP).
 
 # Changelog
+
+<h2>v0.9.1</h2>
+
+<b>Features</b>
+
+- Corregido un error en la interfaz.
+
+<b>Bugs</b>
+
+- Ninguno
+
+<hr>
+
+<h2>v0.9.0</h2>
+
+<b>Features</b>
+
+- Añadido un sistema de puntuaciones que se almacenará en un archivo aparte.
+
+<b>Bugs</b>
+
+- Ninguno
+
+<hr>
 
 <h2>v0.8.1</h2>
 
@@ -13,7 +42,7 @@ El proyecto empezó para aprender Python, trata de resolver problemas matemátic
 
 <b>Bugs</b>
 
-- Por encontrar
+- Ninguno
 
 <hr>
 
@@ -25,7 +54,7 @@ El proyecto empezó para aprender Python, trata de resolver problemas matemátic
 
 <b>Bugs</b>
 
-- Por encontrar
+- Ninguno
 
 <hr>
 
