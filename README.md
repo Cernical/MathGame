@@ -10,6 +10,18 @@
 
 # Changelog
 
+<h2>v0.10.0</h2>
+
+<b>Features</b>
+
+- Se añade un sistema de multiplicador basado en la dificultad elegida.
+
+<b>Bugs</b>
+
+- Ninguno
+
+<hr>
+
 <h2>v0.9.2</h2>
 
 <b>Features</b>

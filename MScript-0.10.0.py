@@ -28,7 +28,7 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.9.2")
+        print("          ¡Bienvenido a MathGame! v0.10.0")
         print("___________________________________________________")
         print("")
         archivo = open("./points.txt", "r")
@@ -41,18 +41,24 @@ while Programa == 1:
         if dificultad == "f":
             RangoMin = 0
             RangoMax = 9
+            MultiPuntuacion = 1
+            MultiplicadorAviso = "1"
             dificultadSalida = "fácil"
             bucle = 2
         else:
             if dificultad == "n":
                 RangoMin = 10
                 RangoMax = 99
+                MultiPuntuacion = 2
+                MultiplicadorAviso = "2"
                 dificultadSalida = "normal"
                 bucle = 2
             else:
                 if dificultad == "d":
                     RangoMin = 100
                     RangoMax = 999
+                    MultiPuntuacion = 3
+                    MultiplicadorAviso = "3"
                     dificultadSalida = "difícil"
                     bucle = 2
                 else:
@@ -63,6 +69,8 @@ while Programa == 1:
 
     print("")
     print("has seleccionado la dificultad "+dificultadSalida)
+    print("")
+    print("Esto te otorga un multiplicador de "+MultiplicadorAviso)
     print("")
     print("---------------------------------------------------")
     print("")
@@ -172,7 +180,8 @@ while Programa == 1:
                 contenido = archivo.read()
                 contenidoInt = int(contenido)
 
-                resultadoAintroducir = contenidoInt+puntuacion
+                puntuacionMultiplicada = puntuacion*MultiPuntuacion
+                resultadoAintroducir = contenidoInt+puntuacionMultiplicada
                 resultadoAintroducir = str(resultadoAintroducir)
 
                 archivo = open("./points.txt", "w")
@@ -264,7 +273,8 @@ while Programa == 1:
                     contenido = archivo.read()
                     contenidoInt = int(contenido)
 
-                    resultadoAintroducir = contenidoInt+puntuacion
+                    puntuacionMultiplicada = puntuacion*MultiPuntuacion
+                    resultadoAintroducir = contenidoInt+puntuacionMultiplicada
                     resultadoAintroducir = str(resultadoAintroducir)
 
                     archivo = open("./points.txt", "w")
@@ -356,7 +366,8 @@ while Programa == 1:
                         contenido = archivo.read()
                         contenidoInt = int(contenido)
 
-                        resultadoAintroducir = contenidoInt+puntuacion
+                        puntuacionMultiplicada = puntuacion*MultiPuntuacion
+                        resultadoAintroducir = contenidoInt+puntuacionMultiplicada
                         resultadoAintroducir = str(resultadoAintroducir)
 
                         archivo = open("./points.txt", "w")
