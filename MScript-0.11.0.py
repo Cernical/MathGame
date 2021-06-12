@@ -28,7 +28,7 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.10.0")
+        print("          ¡Bienvenido a MathGame! v0.11.0")
         print("___________________________________________________")
         print("")
         archivo = open("./points.txt", "r")
@@ -108,7 +108,9 @@ while Programa == 1:
         print("")
         print("Seleccione tipo de problemas;")
         print("")
-        SeleccionProblemas = input("Sumas, Restas o Multiplicaciones (s/r/m): ")
+        print("Sumas | Restas | Multiplicaciones | Divisiones")
+        print("")
+        SeleccionProblemas = input("Introduce (s/r/m/d): ")
         clear()
         if SeleccionProblemas == "s":
             #Sumas--------------------------------------------------------------
@@ -226,8 +228,8 @@ while Programa == 1:
                         print("Restas entre dos números:")
                         print("")
                         from random import randrange
-                        randomnumero1=(randrange(RangoMin,RangoMax))          #Rango de suma
-                        randomnumero2=(randrange(RangoMin,RangoMax))          #Rango de suma
+                        randomnumero1=(randrange(RangoMin,RangoMax))          #Rango de resta
+                        randomnumero2=(randrange(RangoMin,RangoMax))          #Rango de resta
                         print(randomnumero1,"-",randomnumero2)
                         resultadoreal = randomnumero1-randomnumero2           #Resultadoreal
                         resultadoreal = int(resultadoreal)              #Convertir a Integer
@@ -319,8 +321,8 @@ while Programa == 1:
                             print("Multiplicaciones entre dos números:")
                             print("")
                             from random import randrange
-                            randomnumero1=(randrange(RangoMin,RangoMax))          #Rango de suma
-                            randomnumero2=(randrange(RangoMin,RangoMax))          #Rango de suma
+                            randomnumero1=(randrange(RangoMin,RangoMax))          #Rango de Multiplicaciones
+                            randomnumero2=(randrange(RangoMin,RangoMax))          #Rango de Multiplicaciones
                             print(randomnumero1,"x",randomnumero2)
                             resultadoreal = randomnumero1*randomnumero2           #Resultadoreal
                             resultadoreal = int(resultadoreal)              #Convertir a Integer
@@ -389,8 +391,101 @@ while Programa == 1:
                         clear()
                         #FinMultiplicaciones------------------------------------
                 else:
-                    clear()
-                    print("...No has introducido una opción válida (Introduce 's', 'r' o 'm')")
+                    if SeleccionProblemas == "d":
+                        #Divisiones---------------------------------------------
+                        divisiones = "s"
+                        while divisiones == "s":               #Mantener el modulo de Divisiones
+
+                            #Reinicialización-----------------------------------
+                            puntuacion = 0
+                            ContadorPreguntas = 0
+                            #---------------------------------------------------
+
+                            while ContadorPreguntas < numPreguntas:     #Generación de dos números aleatorios
+
+                                #Reinicialización Variables---------------------
+                                randomnumero1 = 0
+                                randomnumero2 = 0
+                                resultadoreal = 0
+                                solucion = 0
+                                salidaOperacionDivisiones = 1
+                                #-----------------------------------------------
+
+                                print("Divisiones entre dos números:")
+                                print("")
+                                from random import randrange
+                                randomnumero1=(randrange(RangoMin,RangoMax))          #Rango de Divisiones
+                                randomnumero2=(randrange(1,9))                        #Rango de Divisiones
+                                print(randomnumero1,"/",randomnumero2)
+                                resultadoreal = randomnumero1/randomnumero2           #Resultadoreal
+                                resultadoreal = int(resultadoreal)              #Convertir a Integer
+
+                                #Debugging (Muestra el resultado por pantalla)--
+                                #print("")
+                                #print(resultadoreal)
+                                #-----------------------------------------------
+
+                                while salidaOperacionDivisiones == 1:   #Para mantener los números anteriores
+
+                                    print("")
+                                    solucion = input("Cuál es la solución: ")   #Solucion introducida pantalla
+
+                                    try:
+                                        solucion = int(solucion)                #Convertir a integer
+                                    except:
+                                        clear()
+                                        print("...No has introducido un número")
+                                        print("")
+                                        print(randomnumero1,"/",randomnumero2)
+
+                                    else:
+                                        if solucion == resultadoreal:
+                                            puntuacion = puntuacion + 1
+                                            clear()
+                                            print("!Has acertado¡")
+                                            ContadorPreguntas = ContadorPreguntas + 1
+                                            salidaOperacionDivisiones = 0
+                                        else:
+                                            clear()
+                                            print("Respuesta incorrecta, el resultado era ",resultadoreal)
+                                            ContadorPreguntas = ContadorPreguntas + 1
+                                            salidaOperacionDivisiones = 0
+
+
+                                print("")
+                                print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+
+                            #Abrir archivo, lectura y procesamiento-----------------
+                            archivo = open("./points.txt", "r")
+
+                            contenido = archivo.read()
+                            contenidoInt = int(contenido)
+
+                            puntuacionMultiplicada = puntuacion*MultiPuntuacion
+                            resultadoAintroducir = contenidoInt+puntuacionMultiplicada
+                            resultadoAintroducir = str(resultadoAintroducir)
+
+                            archivo = open("./points.txt", "w")
+                            archivo.write(resultadoAintroducir)
+                            archivo.close()
+                            #-------------------------------------------------------
+
+                            print("")
+                            divisiones = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                            if divisiones != "s":
+                                clear()
+                                Programa = input("¿Quieres salir? (s/N) ")
+                                if Programa == "s":
+                                    Programa = 0
+                                    BucleSeleccionProblemas = 0
+                                else:
+                                    Programa = 1
+                                    BucleSeleccionProblemas = 0
+                            clear()
+                            #FinDivisiones--------------------------------------
+                    else:
+                        clear()
+                        print("...No has introducido una opción válida (Introduce 's', 'r', 'm' o 'd')")
 
 #Pregunta sobre Archivo Puntuacion----------------------------------------------
 respuestaPuntuacionArchivo = input("¿Quieres ver tu puntuación total? (s/N) ")
