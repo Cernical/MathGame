@@ -1,14 +1,26 @@
 # MathGame
 
 <h2>Creación de juego en python sobre resolución de problemas matemáticos.</h2>
-<p>El proyecto empezó para aprender Python, trata de resolver problemas matemáticos según las exigencias del usuario, (Número de preguntas, dificultad...) con la esperanza de añadir otras opciones y tipos de problemas, (divisiones, ecuaciones, etc...) La versión final debería contener una interfáz gráfica de usuario (GUI).</p>
+<p>El proyecto empezó para aprender Python, trata de resolver problemas matemáticos según las exigencias del usuario, (Número de preguntas, dificultad...) con la esperanza de añadir otras opciones y tipos de problemas, (ecuaciones, etc...) La versión final debería contener una interfáz gráfica de usuario (GUI).</p>
 
 <p>Por ahora se puede realizar lo siguiente:</p>
 
-- Realizar Sumas, Restas y Multiplicaciones.
-- Guardar la puntuación total conseguida en todas las sesiones (WiP).
+- Realizar Sumas, Restas, Multiplicaciones y Divisiones.
+- Guardar la puntuación total conseguida en todas las sesiones.
 
 # Changelog
+
+<h2>v0.11.0</h2>
+
+<b>Features</b>
+
+- Se añade la posibilidad de realizar divisiones.
+
+<b>Bugs</b>
+
+- Por encontrar
+
+<hr>
 
 <h2>v0.10.0</h2>
 
