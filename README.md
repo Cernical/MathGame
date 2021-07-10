@@ -10,6 +10,18 @@
 
 # Changelog
 
+<h2>v0.12.0</h2>
+
+<b>Features</b>
+
+- Se añade un modo de supervivencia
+
+<b>Bugs</b>
+
+- Por encontrar
+
+<hr>
+
 <h2>v0.11.0</h2>
 
 <b>Features</b>
