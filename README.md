@@ -11,6 +11,18 @@
 
 # Changelog
 
+<h2>v0.12.2</h2>
+
+<b>Features</b>
+
+- Mejoras en la interfaz
+
+<b>Bugs</b>
+
+- Por descubrir
+
+<hr>
+
 <h2>v0.12.1</h2>
 
 <b>Features</b>
