@@ -28,7 +28,7 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.12.0")
+        print("          ¡Bienvenido a MathGame! v0.12.1")
         print("___________________________________________________")
         print("")
         archivo = open("./points.txt", "r")
@@ -226,18 +226,32 @@ while Programa == 1:
                 archivo.write(resultadoAintroducir)
                 archivo.close()
                 #---------------------------------------------------------------
-
-                sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
-                if sumas != "s":
-                    clear()
+                #Desenlace_Operaciones------------------------------------------
+                if modo_supervivencia == 1:
+                    print("Te has quedado sin vidas")
+                    print("")
                     Programa = input("¿Quieres salir? (s/N) ")
                     if Programa == "s":
+                        sumas = "n"               #Para salirse del modulo sumas
                         Programa = 0
                         BucleSeleccionProblemas = 0
                     else:
+                        sumas = "n"               #Para salirse del modulo sumas
                         Programa = 1
                         BucleSeleccionProblemas = 0
+                else:
+                    sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                    if sumas != "s":
+                        clear()
+                        Programa = input("¿Quieres salir? (s/N) ")
+                        if Programa == "s":
+                            Programa = 0
+                            BucleSeleccionProblemas = 0
+                        else:
+                            Programa = 1
+                            BucleSeleccionProblemas = 0
                 clear()
+                #FinDesenlace---------------------------------------------------
                 #FinSumas-------------------------------------------------------
         else:
             if SeleccionProblemas == "r":
@@ -326,19 +340,32 @@ while Programa == 1:
                     archivo.write(resultadoAintroducir)
                     archivo.close()
                     #-----------------------------------------------------------
-
-                    print("")
-                    restas = input("¿Quieres seguir realizando operaciones? (s/N) ")
-                    if restas != "s":
-                        clear()
+                    #Desenlace_Operaciones--------------------------------------
+                    if modo_supervivencia == 1:
+                        print("Te has quedado sin vidas")
+                        print("")
                         Programa = input("¿Quieres salir? (s/N) ")
                         if Programa == "s":
+                            restas = "n"         #Para salirse del modulo restas
                             Programa = 0
                             BucleSeleccionProblemas = 0
                         else:
+                            restas = "n"         #Para salirse del modulo restas
                             Programa = 1
                             BucleSeleccionProblemas = 0
+                    else:
+                        restas = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                        if restas != "s":
+                            clear()
+                            Programa = input("¿Quieres salir? (s/N) ")
+                            if Programa == "s":
+                                Programa = 0
+                                BucleSeleccionProblemas = 0
+                            else:
+                                Programa = 1
+                                BucleSeleccionProblemas = 0
                     clear()
+                    #FinDesenlace-----------------------------------------------
                     #FinRestas--------------------------------------------------
             else:
                 if SeleccionProblemas == "m":
@@ -427,19 +454,32 @@ while Programa == 1:
                         archivo.write(resultadoAintroducir)
                         archivo.close()
                         #-------------------------------------------------------
-
-                        print("")
-                        multiplicaciones = input("¿Quieres seguir realizando operaciones? (s/N) ")
-                        if multiplicaciones != "s":
-                            clear()
+                        #Desenlace_Operaciones----------------------------------
+                        if modo_supervivencia == 1:
+                            print("Te has quedado sin vidas")
+                            print("")
                             Programa = input("¿Quieres salir? (s/N) ")
                             if Programa == "s":
+                                multiplicaciones = "n" #Para salirse del modulo multiplicaciones
                                 Programa = 0
                                 BucleSeleccionProblemas = 0
                             else:
+                                multiplicaciones = "n" #Para salirse del modulo multiplicaciones
                                 Programa = 1
                                 BucleSeleccionProblemas = 0
+                        else:
+                            multiplicaciones = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                            if multiplicaciones != "s":
+                                clear()
+                                Programa = input("¿Quieres salir? (s/N) ")
+                                if Programa == "s":
+                                    Programa = 0
+                                    BucleSeleccionProblemas = 0
+                                else:
+                                    Programa = 1
+                                    BucleSeleccionProblemas = 0
                         clear()
+                        #FinDesenlace-------------------------------------------
                         #FinMultiplicaciones------------------------------------
                 else:
                     if SeleccionProblemas == "d":
@@ -514,7 +554,7 @@ while Programa == 1:
                                     print("Tienes",vida,"vidas")
                                     print("")
 
-                            #Abrir archivo, lectura y procesamiento-----------------
+                            #Abrir archivo, lectura y procesamiento-------------
                             archivo = open("./points.txt", "r")
 
                             contenido = archivo.read()
@@ -527,20 +567,33 @@ while Programa == 1:
                             archivo = open("./points.txt", "w")
                             archivo.write(resultadoAintroducir)
                             archivo.close()
-                            #-------------------------------------------------------
-
-                            print("")
-                            divisiones = input("¿Quieres seguir realizando operaciones? (s/N) ")
-                            if divisiones != "s":
-                                clear()
+                            #---------------------------------------------------
+                            #Desenlace_Operaciones------------------------------
+                            if modo_supervivencia == 1:
+                                print("Te has quedado sin vidas")
+                                print("")
                                 Programa = input("¿Quieres salir? (s/N) ")
                                 if Programa == "s":
+                                    divisiones = "n" #Para salirse del modulo divisiones
                                     Programa = 0
                                     BucleSeleccionProblemas = 0
                                 else:
+                                    divisiones = "n" #Para salirse del modulo divisiones
                                     Programa = 1
                                     BucleSeleccionProblemas = 0
+                            else:
+                                divisiones = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                                if divisiones != "s":
+                                    clear()
+                                    Programa = input("¿Quieres salir? (s/N) ")
+                                    if Programa == "s":
+                                        Programa = 0
+                                        BucleSeleccionProblemas = 0
+                                    else:
+                                        Programa = 1
+                                        BucleSeleccionProblemas = 0
                             clear()
+                            #FinDesenlace---------------------------------------
                             #FinDivisiones--------------------------------------
                     else:
                         clear()
