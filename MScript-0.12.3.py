@@ -28,7 +28,7 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.11.0")
+        print("          ¡Bienvenido a MathGame! v0.12.3")
         print("___________________________________________________")
         print("")
         archivo = open("./points.txt", "r")
@@ -77,32 +77,66 @@ while Programa == 1:
 
     #---------------------------------------------------------------------------
 
-    #Pedida por pantalla NºPreguntas--------------------------------------------
-    bucle2 = 1
-    while bucle2 == 1:                                #Introducción nº preguntas
+    #Modo_Preguntas-------------------------------------------------------------
+    respuesta_supervivencia = 0
+    modo_supervivencia = 0
 
-        numPreguntas = input("Cuántas preguntas quieres (del 1 al 5): ")
-        try:
-            numPreguntas = int(numPreguntas)
-        except:
+    bucle_modo = 1
+    while bucle_modo == 1:
+
+        respuesta_supervivencia = input("¿Quieres activar el modo supervivencia? (s/N): ")
+
+        if respuesta_supervivencia == "s" or respuesta_supervivencia == "S":
+            modo_supervivencia = 1
+            vida = 5
+            vidascii = "♥♥♥♥♥"
+            numPreguntas = 0
             print("")
-            clear()
-            print("...No has introducido un número")
+            print("Modo de supervivencia activado")
             print("")
+            print("Tienes",vida,"vidas")
+            bucle_modo = 0
         else:
-            if numPreguntas <1:
-                print("Debe seleccionar un número igual o mayor que 1")
-            else:
-                if numPreguntas >5:
-                    print("Has seleccionado un número incorrecto")
-                else:
-                    bucle2 = 2
+            modo_supervivencia = 0
+            print("")
+            print("Modo de supervivencia desactivado")
+            print("")
+            print("---------------------------------------------------")
+            print("")
+            vida = 0
+            bucle_modo = 0
 
-    #---------------------------------------------------------------------------
+            #Pedida por pantalla NºPreguntas------------------------------------
+            bucle2 = 1
+            while bucle2 == 1:                                #Introducción nº preguntas
+
+                numPreguntas = input("Cuántas preguntas quieres (del 1 al 5): ")
+                try:
+                    numPreguntas = int(numPreguntas)
+                except:
+                    print("")
+                    clear()
+                    print("...No has introducido un número")
+                    print("")
+                else:
+                    if numPreguntas <1:
+                        clear()
+                        print("Debe seleccionar un número igual o mayor que 1")
+                        print("")
+                    else:
+                        if numPreguntas >5:
+                            clear()
+                            print("Has seleccionado un número incorrecto")
+                            print("")
+                        else:
+                            bucle2 = 2
+            #Fin_pedida_numero_preguntas----------------------------------------
+    #Fin_modo_preguntas---------------------------------------------------------
 
     #Selección Problemas--------------------------------------------------------
     BucleSeleccionProblemas = 1
     while BucleSeleccionProblemas == 1:
+
         print("")
         print("---------------------------------------------------")
         print("")
@@ -112,7 +146,9 @@ while Programa == 1:
         print("")
         SeleccionProblemas = input("Introduce (s/r/m/d): ")
         clear()
+
         if SeleccionProblemas == "s":
+
             #Sumas--------------------------------------------------------------
             sumas = "s"
             while sumas == "s":                     #Mantener el modulo de sumas
@@ -122,7 +158,7 @@ while Programa == 1:
                 ContadorPreguntas = 0
                 #---------------------------------------------------------------
 
-                while ContadorPreguntas < numPreguntas:     #Generación de dos números aleatorios
+                while ContadorPreguntas < numPreguntas or vida != 0:     #Generación de dos números aleatorios
 
                     #Reinicialización Variables---------------------------------
                     randomnumero1 = 0
@@ -167,14 +203,42 @@ while Programa == 1:
                                 ContadorPreguntas = ContadorPreguntas + 1
                                 salidaOperacionSumas = 0
                             else:
+                                vida = vida - 1
                                 clear()
                                 print("Respuesta incorrecta, el resultado era ",resultadoreal)
                                 ContadorPreguntas = ContadorPreguntas + 1
                                 salidaOperacionSumas = 0
 
+                    if modo_supervivencia == 0:
+                        print("")
+                        print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+                        print("")
+                    else:
+                        print("")
+                        print("Has acertado ",puntuacion," preguntas de un total de ",ContadorPreguntas)
+                        print("")
 
-                    print("")
-                    print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+                        if vida == 5:
+                            vidascii = "♥♥♥♥♥"
+                        else:
+                            if vida == 4:
+                                vidascii = "♥♥♥♥"
+                            else:
+                                if vida == 3:
+                                    vidascii = "♥♥♥"
+                                else:
+                                    if vida == 2:
+                                        vidascii = "♥♥"
+                                    else:
+                                        if vida == 1:
+                                            vidascii = "♥"
+                                        else:
+                                            vidascii = "0"
+
+                        print("Tienes",vidascii,"vidas")
+                        print("")
+                        print("---------------------------------------------------")
+                        print("")
 
                 #Abrir archivo, lectura y procesamiento-------------------------
                 archivo = open("./points.txt", "r")
@@ -191,19 +255,34 @@ while Programa == 1:
                 archivo.close()
                 #---------------------------------------------------------------
 
-                print("")
-                sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
-                if sumas != "s":
-                    clear()
+                #Desenlace_Operaciones------------------------------------------
+                if modo_supervivencia == 1:
+                    print("Te has quedado sin vidas")
+                    print("")
                     Programa = input("¿Quieres salir? (s/N) ")
                     if Programa == "s":
+                        sumas = "n"               #Para salirse del modulo sumas
                         Programa = 0
                         BucleSeleccionProblemas = 0
                     else:
+                        sumas = "n"               #Para salirse del modulo sumas
                         Programa = 1
                         BucleSeleccionProblemas = 0
+                else:
+                    sumas = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                    if sumas != "s":
+                        clear()
+                        Programa = input("¿Quieres salir? (s/N) ")
+                        if Programa == "s":
+                            Programa = 0
+                            BucleSeleccionProblemas = 0
+                        else:
+                            Programa = 1
+                            BucleSeleccionProblemas = 0
                 clear()
+                #FinDesenlace---------------------------------------------------
                 #FinSumas-------------------------------------------------------
+
         else:
             if SeleccionProblemas == "r":
                 #Restas---------------------------------------------------------
@@ -215,7 +294,7 @@ while Programa == 1:
                     ContadorPreguntas = 0
                     #-----------------------------------------------------------
 
-                    while ContadorPreguntas < numPreguntas:     #Generación de dos números aleatorios
+                    while ContadorPreguntas < numPreguntas or vida != 0:     #Generación de dos números aleatorios
 
                         #Reinicialización Variables-----------------------------
                         randomnumero1 = 0
@@ -260,14 +339,42 @@ while Programa == 1:
                                     ContadorPreguntas = ContadorPreguntas + 1
                                     salidaOperacionRestas = 0
                                 else:
+                                    vida = vida - 1
                                     clear()
                                     print("Respuesta incorrecta, el resultado era ",resultadoreal)
                                     ContadorPreguntas = ContadorPreguntas + 1
                                     salidaOperacionRestas = 0
 
+                        if modo_supervivencia == 0:
+                            print("")
+                            print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+                            print("")
+                        else:
+                            print("")
+                            print("Has acertado ",puntuacion," preguntas de un total de ",ContadorPreguntas)
+                            print("")
 
-                        print("")
-                        print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+                            if vida == 5:
+                                vidascii = "♥♥♥♥♥"
+                            else:
+                                if vida == 4:
+                                    vidascii = "♥♥♥♥"
+                                else:
+                                    if vida == 3:
+                                        vidascii = "♥♥♥"
+                                    else:
+                                        if vida == 2:
+                                            vidascii = "♥♥"
+                                        else:
+                                            if vida == 1:
+                                                vidascii = "♥"
+                                            else:
+                                                vidascii = "0"
+
+                            print("Tienes",vidascii,"vidas")
+                            print("")
+                            print("---------------------------------------------------")
+                            print("")
 
                     #Abrir archivo, lectura y procesamiento---------------------
                     archivo = open("./points.txt", "r")
@@ -284,18 +391,33 @@ while Programa == 1:
                     archivo.close()
                     #-----------------------------------------------------------
 
-                    print("")
-                    restas = input("¿Quieres seguir realizando operaciones? (s/N) ")
-                    if restas != "s":
-                        clear()
+                    #Desenlace_Operaciones--------------------------------------
+                    if modo_supervivencia == 1:
+                        print("Te has quedado sin vidas")
+                        print("")
                         Programa = input("¿Quieres salir? (s/N) ")
                         if Programa == "s":
+                            restas = "n"         #Para salirse del modulo restas
                             Programa = 0
                             BucleSeleccionProblemas = 0
                         else:
+                            restas = "n"         #Para salirse del modulo restas
                             Programa = 1
                             BucleSeleccionProblemas = 0
+                    else:
+                        restas = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                        if restas != "s":
+                            clear()
+                            Programa = input("¿Quieres salir? (s/N) ")
+                            if Programa == "s":
+                                Programa = 0
+                                BucleSeleccionProblemas = 0
+                            else:
+                                Programa = 1
+                                BucleSeleccionProblemas = 0
                     clear()
+                    #FinDesenlace-----------------------------------------------
+
                     #FinRestas--------------------------------------------------
             else:
                 if SeleccionProblemas == "m":
@@ -308,7 +430,7 @@ while Programa == 1:
                         ContadorPreguntas = 0
                         #-------------------------------------------------------
 
-                        while ContadorPreguntas < numPreguntas:     #Generación de dos números aleatorios
+                        while ContadorPreguntas < numPreguntas or vida != 0:     #Generación de dos números aleatorios
 
                             #Reinicialización Variables-------------------------
                             randomnumero1 = 0
@@ -353,14 +475,42 @@ while Programa == 1:
                                         ContadorPreguntas = ContadorPreguntas + 1
                                         salidaOperacionMultiplicaciones = 0
                                     else:
+                                        vida = vida - 1
                                         clear()
                                         print("Respuesta incorrecta, el resultado era ",resultadoreal)
                                         ContadorPreguntas = ContadorPreguntas + 1
                                         salidaOperacionMultiplicaciones = 0
 
+                            if modo_supervivencia == 0:
+                                print("")
+                                print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+                                print("")
+                            else:
+                                print("")
+                                print("Has acertado ",puntuacion," preguntas de un total de ",ContadorPreguntas)
+                                print("")
 
-                            print("")
-                            print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+                                if vida == 5:
+                                    vidascii = "♥♥♥♥♥"
+                                else:
+                                    if vida == 4:
+                                        vidascii = "♥♥♥♥"
+                                    else:
+                                        if vida == 3:
+                                            vidascii = "♥♥♥"
+                                        else:
+                                            if vida == 2:
+                                                vidascii = "♥♥"
+                                            else:
+                                                if vida == 1:
+                                                    vidascii = "♥"
+                                                else:
+                                                    vidascii = "0"
+
+                                print("Tienes",vidascii,"vidas")
+                                print("")
+                                print("---------------------------------------------------")
+                                print("")
 
                         #Abrir archivo, lectura y procesamiento-----------------
                         archivo = open("./points.txt", "r")
@@ -376,19 +526,32 @@ while Programa == 1:
                         archivo.write(resultadoAintroducir)
                         archivo.close()
                         #-------------------------------------------------------
-
-                        print("")
-                        multiplicaciones = input("¿Quieres seguir realizando operaciones? (s/N) ")
-                        if multiplicaciones != "s":
-                            clear()
+                        #Desenlace_Operaciones----------------------------------
+                        if modo_supervivencia == 1:
+                            print("Te has quedado sin vidas")
+                            print("")
                             Programa = input("¿Quieres salir? (s/N) ")
                             if Programa == "s":
+                                multiplicaciones = "n" #Para salirse del modulo multiplicaciones
                                 Programa = 0
                                 BucleSeleccionProblemas = 0
                             else:
+                                multiplicaciones = "n" #Para salirse del modulo multiplicaciones
                                 Programa = 1
                                 BucleSeleccionProblemas = 0
+                        else:
+                            multiplicaciones = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                            if multiplicaciones != "s":
+                                clear()
+                                Programa = input("¿Quieres salir? (s/N) ")
+                                if Programa == "s":
+                                    Programa = 0
+                                    BucleSeleccionProblemas = 0
+                                else:
+                                    Programa = 1
+                                    BucleSeleccionProblemas = 0
                         clear()
+                        #FinDesenlace-------------------------------------------
                         #FinMultiplicaciones------------------------------------
                 else:
                     if SeleccionProblemas == "d":
@@ -401,7 +564,7 @@ while Programa == 1:
                             ContadorPreguntas = 0
                             #---------------------------------------------------
 
-                            while ContadorPreguntas < numPreguntas:     #Generación de dos números aleatorios
+                            while ContadorPreguntas < numPreguntas or vida != 0:     #Generación de dos números aleatorios
 
                                 #Reinicialización Variables---------------------
                                 randomnumero1 = 0
@@ -446,16 +609,44 @@ while Programa == 1:
                                             ContadorPreguntas = ContadorPreguntas + 1
                                             salidaOperacionDivisiones = 0
                                         else:
+                                            vida = vida - 1
                                             clear()
                                             print("Respuesta incorrecta, el resultado era ",resultadoreal)
                                             ContadorPreguntas = ContadorPreguntas + 1
                                             salidaOperacionDivisiones = 0
 
+                                if modo_supervivencia == 0:
+                                    print("")
+                                    print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+                                    print("")
+                                else:
+                                    print("")
+                                    print("Has acertado ",puntuacion," preguntas de un total de ",ContadorPreguntas)
+                                    print("")
 
-                                print("")
-                                print("Has acertado ",puntuacion," preguntas de un total de ",numPreguntas)
+                                    if vida == 5:
+                                        vidascii = "♥♥♥♥♥"
+                                    else:
+                                        if vida == 4:
+                                            vidascii = "♥♥♥♥"
+                                        else:
+                                            if vida == 3:
+                                                vidascii = "♥♥♥"
+                                            else:
+                                                if vida == 2:
+                                                    vidascii = "♥♥"
+                                                else:
+                                                    if vida == 1:
+                                                        vidascii = "♥"
+                                                    else:
+                                                        vidascii = "0"
 
-                            #Abrir archivo, lectura y procesamiento-----------------
+                                    print("Tienes",vidascii,"vidas")
+                                    print("")
+                                    print("---------------------------------------------------")
+                                    print("")
+
+                            #Abrir archivo, lectura y procesamiento-------------
                             archivo = open("./points.txt", "r")
 
                             contenido = archivo.read()
@@ -468,20 +659,35 @@ while Programa == 1:
                             archivo = open("./points.txt", "w")
                             archivo.write(resultadoAintroducir)
                             archivo.close()
-                            #-------------------------------------------------------
+                            #---------------------------------------------------
 
-                            print("")
-                            divisiones = input("¿Quieres seguir realizando operaciones? (s/N) ")
-                            if divisiones != "s":
-                                clear()
+                            #Desenlace_Operaciones------------------------------
+                            if modo_supervivencia == 1:
+                                print("Te has quedado sin vidas")
+                                print("")
                                 Programa = input("¿Quieres salir? (s/N) ")
                                 if Programa == "s":
+                                    divisiones = "n" #Para salirse del modulo divisiones
                                     Programa = 0
                                     BucleSeleccionProblemas = 0
                                 else:
+                                    divisiones = "n" #Para salirse del modulo divisiones
                                     Programa = 1
                                     BucleSeleccionProblemas = 0
+                            else:
+                                divisiones = input("¿Quieres seguir realizando operaciones? (s/N) ")
+                                if divisiones != "s":
+                                    clear()
+                                    Programa = input("¿Quieres salir? (s/N) ")
+                                    if Programa == "s":
+                                        Programa = 0
+                                        BucleSeleccionProblemas = 0
+                                    else:
+                                        Programa = 1
+                                        BucleSeleccionProblemas = 0
                             clear()
+                            #FinDesenlace---------------------------------------
+
                             #FinDivisiones--------------------------------------
                     else:
                         clear()

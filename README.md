@@ -6,9 +6,58 @@
 <p>Por ahora se puede realizar lo siguiente:</p>
 
 - Realizar Sumas, Restas, Multiplicaciones y Divisiones.
-- Guardar la puntuación total conseguida en todas las sesiones.
+- Guardar la puntuación total conseguida en todas las sesiones a través de un archivo externo.
+- Jugar en modo supervivencia!
 
 # Changelog
+
+<h2>v0.12.3</h2>
+
+<b>Features</b>
+
+- Mejoras en la interfaz
+
+<b>Bugs</b>
+
+- Por descubrir
+
+<hr>
+
+<h2>v0.12.2</h2>
+
+<b>Features</b>
+
+- Mejoras en la interfaz
+
+<b>Bugs</b>
+
+- Por descubrir
+
+<hr>
+
+<h2>v0.12.1</h2>
+
+<b>Features</b>
+
+- Se arregla el fallo anterior en el que se quedará en bucle eternamente al terminar una sesión de supervivencia
+
+<b>Bugs</b>
+
+- Por descubrir
+
+<hr>
+
+<h2>v0.12.0</h2>
+
+<b>Features</b>
+
+- Se añade un modo de supervivencia
+
+<b>Bugs</b>
+
+- Al tener activado el modo de supervivencia se preguntará eternamente si se quiere volver a realizar operaciones al quedarse sin vidas.
+
+<hr>
 
 <h2>v0.11.0</h2>
 
@@ -18,7 +67,7 @@
 
 <b>Bugs</b>
 
-- Por encontrar
+- Ninguno
 
 <hr>
 
