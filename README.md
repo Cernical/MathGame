@@ -30,7 +30,7 @@
 
 <b>Bugs</b>
 
-- Por encontrar
+- Ninguno
 
 <hr>
 
