@@ -28,7 +28,7 @@ while Programa == 1:
 
         print("___________________________________________________")
         print()
-        print("          ¡Bienvenido a MathGame! v0.12.2")
+        print("          ¡Bienvenido a MathGame! v0.12.3")
         print("___________________________________________________")
         print("")
         archivo = open("./points.txt", "r")
@@ -120,10 +120,14 @@ while Programa == 1:
                     print("")
                 else:
                     if numPreguntas <1:
+                        clear()
                         print("Debe seleccionar un número igual o mayor que 1")
+                        print("")
                     else:
                         if numPreguntas >5:
+                            clear()
                             print("Has seleccionado un número incorrecto")
+                            print("")
                         else:
                             bucle2 = 2
             #Fin_pedida_numero_preguntas----------------------------------------
