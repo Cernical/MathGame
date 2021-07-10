@@ -18,7 +18,7 @@
 
 <b>Bugs</b>
 
-- Por encontrar
+- Al tener activado el modo de supervivencia se preguntará eternamente si se quiere volver a realizar operaciones al quedarse sin vidas.
 
 <hr>
 
