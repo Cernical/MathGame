@@ -13,7 +13,7 @@
 
 <b>Features</b>
 
-- Se pueden realizar sumas WIP
+- Se pueden realizar sumas (WIP)
 
 <b>Bugs</b>
 
