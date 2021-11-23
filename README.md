@@ -9,6 +9,18 @@
 
 # Changelog
 
+<h2>v0.2.0</h2>
+
+<b>Features</b>
+
+- Se pueden realizar sumas WIP
+
+<b>Bugs</b>
+
+- WIP
+
+<hr>
+
 <h2>v0.1.0</h2>
 
 <b>Features</b>
@@ -17,6 +29,6 @@
 
 <b>Bugs</b>
 
-- Ninguno
+- WIP
 
 <hr>
