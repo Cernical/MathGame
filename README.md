@@ -1,4 +1,4 @@
-# MathGame Android APK version
+# MathGame Android Edition Version
 
 <h2>Creación de juego en python sobre resolución de problemas matemáticos.</h2>
 <p>El proyecto empezó para aprender Python, trata de resolver problemas matemáticos según las exigencias del usuario, (Número de preguntas, dificultad...) con la esperanza de añadir otras opciones y tipos de problemas, (ecuaciones, etc...) La versión final debería contener una interfáz gráfica de usuario (GUI).</p>
